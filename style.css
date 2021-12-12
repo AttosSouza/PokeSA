@@ -1,0 +1,301 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.headerBg {
+    width: 100%;
+    padding: 25px 0; 
+    background: #CAF0F8;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 10px;
+    color: #707070;
+}
+
+#menu  {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#menu a {
+    display: block;
+    font-size: 1.125em;
+    text-transform: capitalize;
+    margin: 0 25px;
+    font-weight: bold;
+    color: #707070;
+}
+
+/* Mobile Menu */
+#btn-mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 82px;
+        right: 0;
+        height: 0px;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+        transition: 0.6s;
+        background: #CAF0F8;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+      }
+
+    #btn-mobile {
+        display: block;
+        padding: 10px 20px;
+        font-size: 18px;
+        margin: 0 10px;
+        border: none;
+        cursor: pointer;
+        background: none;
+        gap: 0.5rem;
+    }
+
+    #hamburger {
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+      #hamburger::after,
+      #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+      }
+
+      #nav.active #menu {
+        height: calc(100vh - 82px);
+        visibility: visible;
+        overflow-y: auto;
+      }
+
+    
+
+}
+
+/* Banner */
+.banner {
+    background: url(./img/nepn-pokemon-lotad-bnj3wh1u1ewddyny.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+}
+
+/* About */
+.about {
+    padding-top: 60px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 1.5em;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    color: #707070;
+}
+
+/* Characters*/
+.characters {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.characters h2 {
+    font-size: 1.5em;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    color: #707070;
+
+}
+
+.characterBox {
+    display: flex;
+    gap: 24px;
+}
+
+.textBox {
+    padding: 0 0 15px 0;
+    min-width: 280px;
+    background: #CAF0F8;
+}
+
+.textBox p {
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #707070;
+}
+
+/* Pokemon */
+.pokemonBg {
+    padding: 60px 0;
+    background: #CAF0F8;
+}
+
+.content h2 {
+    font-size: 1.5em;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #707070;
+}
+
+.quote {
+    text-align: center;
+    color: #707070;
+}
+
+.quote p {
+    font-size: 1.125em;
+    line-height: 27px;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#form input {
+    padding: 10px 10px;
+    border: 2px solid #000;
+    outline: none;
+    background: transparent;
+}
+
+#form button {
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+}
+
+#cardApi {
+    max-width: 300px;
+    margin: 60px auto;
+}
+
+.contentApi {
+    padding: 10px 0;
+    background: #f8f9fa;
+    border-radius: 35px;
+}
+
+.imgBox img {
+    margin: 0 auto;
+}
+
+.textApi h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.textApi h3::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 10px auto;
+    background: #000;
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+}
+
+.status p {
+    margin: 15px 10px;
+    font-size: 16px;
+    line-height: 27px;
+    width: 50px;
+    text-align: center;
+}
+
+/* Footer */
+.footerBg {
+    padding: 20px 0;
+    text-align: center;
+    background: #000;
+}
+
+.footerBg p {
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .characterBox {
+        display: block;
+    }
+
+    .textBox {
+        margin: 25px 0;
+        padding: 0 0 20px 0;
+        background: #CAF0F8;
+    }
+
+    .textBox img {
+        width: 100%;
+    }
+}
+
+
+

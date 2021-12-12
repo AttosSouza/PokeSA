@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Title(aparece na aba do navegador)-->
+    <title>Pokemom</title>
+
+    <!--CSS (aplica estilos(font,color,background etc...) na página)-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!--Header(cabeçalho)-->
+    <header class="headerBg">
+        <div class="container headerContent">
+
+            <a href="#"  class="logo">PokeSA</a>
+
+            <nav id="nav">
+                <ul id="menu">
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">characters</a></li>
+                    <li><a href="#">types</a></li>
+                    <li><a href="#">items</a></li>
+                </ul>
+            </nav>
+
+            <button id="btn-mobile">
+                <span id="hamburger"></span>
+            </button>
+            
+        </div>
+    </header>
+
+    <!--Banner-->
+
+    <!--About(Sobre)-->
+    <section class="about">
+        <h2>about</h2>
+        <p>Pokémon, also known as Pokémon the Series to Western audiences since the year 2013,<br>
+            is an anime television series based on the Pokémon video game series.<br>
+             It was originally broadcast on TV Tokyo in 1997. More than 1,000 episodes of the anime</p>
+    </section>
+
+    <!--Characters(Personagens)-->
+    <section class="characters">
+        <div class="container">
+            <h2>characters</h2>
+            <div class="characterBox">
+
+                <div class="textBox">
+                    <div>
+                        <img src="img/b052c3fab538b244096d06db712ca2f2.jpg" alt="">
+                    </div>
+                    <p>brock</p>
+                </div>
+
+                <div class="textBox">
+                    <div>
+                        <img src="img/pokemon.jpg" alt="">
+                    </div>
+                    <p>ash</p>
+                </div>
+
+                <div class="textBox">
+                    <div>
+                        <img src="img/misty-p-mmaria.png" alt="">
+                    </div>
+                    <p>misty</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--PokeApi-->
+    <section class="pokemonBg">
+        <div class="content">
+
+            <h2>find your pokemon</h2>
+            <blockquote class="quote">
+                <p>You gotta keep smiling, no matter how tough things are getting</p>
+                <cite>
+                    - Ashe Ketchum
+                </cite>
+            </blockquote>
+   
+            <form id="form">
+                    <input type="text" name="pokemon" id="search">
+                    <button type="submit" id="searchBtn"><i class="fa fa-search"></i></button>
+            </form>
+
+            <div id="cardApi"></div>
+        </div>
+    </section>
+
+    <!--Footer(Rodapé)-->
+    <footer class="footerBg">
+        <p>Developed by Atos Souza</p>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
